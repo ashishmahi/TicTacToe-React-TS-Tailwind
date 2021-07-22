@@ -18,7 +18,20 @@ module.exports = {
   // Matches parent folder `__tests__` and filename
   // should contain `test` or `spec`.
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-
+  collectCoverageFrom: [
+    "**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!src/index.tsx",
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
   // Module file extensions for importing
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {
