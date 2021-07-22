@@ -1,5 +1,6 @@
 {
   "name": "tictactoe-react-ts-tailwind",
+  "homepage": "https://ashishmahi.github.io/tictactoe/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
