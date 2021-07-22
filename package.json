@@ -18,7 +18,7 @@
     "start": "yarn webpack-dev-server --hot",
     "dev": "yarn start",
     "test": "jest --coverage",
-    "prod": "yarn webpack --env mode=production",
+    "prod": "NODE_ENV=production yarn webpack --env mode=production",
     "prod:analyze": "yarn prod --env presets=analyze"
   },
   "eslintConfig": {

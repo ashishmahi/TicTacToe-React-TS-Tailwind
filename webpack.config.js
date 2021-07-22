@@ -1,4 +1,5 @@
 const webpackMerge = require("webpack-merge").merge;
+const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -23,7 +24,7 @@ module.exports = ({ mode = "development", presets = [] }) => {
           {
             test: /\.css$/,
             include: path.resolve(__dirname, "src"),
-            use: ["style-loader", "css-loader", "postcss-loader"],
+            use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
           },
           {
             test: /\.(js|jsx)$/,
@@ -53,7 +54,12 @@ module.exports = ({ mode = "development", presets = [] }) => {
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, "src", "index.html"),
         }),
-        new MiniCssExtractPlugin(),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+          filename: "[name].css",
+          chunkFilename: "[id].css",
+          ignoreOrder: false, // Enable to remove warnings about conflicting order
+        }),
       ],
     },
     loadPresets({ mode, presets })

@@ -9,7 +9,12 @@
     "sourceMap": true,
     "target": "es5",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "declaration": true,
   },
   "include": [
     "src/index.tsx"
