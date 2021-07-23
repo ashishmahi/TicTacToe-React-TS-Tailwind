@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Game Test should render game 1`] = `
+exports[`Board should render with given grid 1`] = `
 <div>
   <div
     class="w-min m-auto flex-col flex h-full justify-center items-center"

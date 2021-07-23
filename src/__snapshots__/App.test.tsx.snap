@@ -3,7 +3,7 @@
 exports[`App Test should render app 1`] = `
 <div>
   <div
-    class="App"
+    class="App h-screen"
   >
     <header
       class="App-header"
@@ -12,7 +12,79 @@ exports[`App Test should render app 1`] = `
         Lets's Play Tic Tac Toe :)
       </p>
     </header>
-    <div />
+    <div
+      class="w-min m-auto flex-col flex h-full justify-center items-center"
+    >
+      <div
+        class="border"
+      >
+        <div
+          class="flex flex-row"
+        >
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            1_1
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            1_2
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            1_3
+          </div>
+        </div>
+      </div>
+      <div
+        class="border"
+      >
+        <div
+          class="flex flex-row"
+        >
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            2_1
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            2_2
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            2_3
+          </div>
+        </div>
+      </div>
+      <div
+        class="border"
+      >
+        <div
+          class="flex flex-row"
+        >
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            3_1
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            3_2
+          </div>
+          <div
+            class="border border-green-400 h-20 w-20 flex justify-center items-center"
+          >
+            3_3
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

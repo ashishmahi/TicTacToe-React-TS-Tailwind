@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-// import { getWinningCombinationFor } from "./gridHelper";
+import { getGridFor } from "./gridHelper";
+import Board from "../Board/Board";
 
 interface GameProps {
-  numberOfColumns?: number;
+  numberOfColumns: number;
 }
 
-const Game: React.FC<GameProps> = ({ numberOfColumns: columnConfig }) => {
-  return <div></div>;
+const Game: React.FC<GameProps> = ({ numberOfColumns }) => {
+  const grid = getGridFor(numberOfColumns);
+  return <Board grid={grid} />;
 };
 
 Game.defaultProps = {
